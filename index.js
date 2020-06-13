@@ -53,7 +53,7 @@ io.on('connection', (socket) => {
 })
 
 function getWinner(p1, p2){
-    if(p1.weapon == (p2.weapon + 1) % 3) return p1.id
-    if(p1.weapon == p2.weapon) return -1
-    else return p2.id
+    if(p1.weapon == (p2.weapon + 1) % 3) return p1.id // player 1 win
+    if(p1.weapon == p2.weapon) return -1 // tie
+    else return p2.id // player 2 win
 }
